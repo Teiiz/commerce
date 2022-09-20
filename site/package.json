@@ -1,6 +1,6 @@
 {
   "name": "next-commerce",
-  "version": "1.0.2",
+  "version": "1.22.19",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
