@@ -36,8 +36,8 @@
 //   }
 // }
 
-Cypress.Commands.add("getBySel", (selector, ...args) => {
-    return cy.get(`[data-test=${selector}]`, ...args)
+Cypress.Commands.add("getBySel", (selector) => {
+    return cy.get(`[data-test=${selector}]`)
   })
 
 declare global {
@@ -47,7 +47,7 @@ declare global {
        * Custom command to select DOM element by data-cy attribute.
        * @example cy.dataCy('greeting')
        */
-      getBySel(value: string): Chainable<Element>
+      getBySel(selector: string): Chainable<Element>
     }
   }
 }
