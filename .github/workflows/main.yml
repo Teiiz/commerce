@@ -19,8 +19,8 @@ jobs:
         with:
           project: ./site
           browser: chrome
-          build: npm run build
-          start: npm start
+          build: pnpm turbo run build
+          start: pnpm turbo run start
           wait-on: "http://localhost:3000"
         env:
           COMMERCE_PROVIDER: ${{ secrets.COMMERCE_PROVIDER }}
