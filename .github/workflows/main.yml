@@ -13,13 +13,17 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
+          
+      - name: Install dependencies
+        run: pnpm install
         
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
           project: ./site
           browser: chrome
-          start: npm start
+          build: pnpm turbo run build
+          start: pnpm turbo run start
           wait-on: "http://localhost:3000"
         env:
           COMMERCE_PROVIDER: ${{ secrets.COMMERCE_PROVIDER }}
