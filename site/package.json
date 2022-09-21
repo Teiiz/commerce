@@ -1,6 +1,6 @@
 {
   "name": "next-commerce",
-  "version": "0.0.1",
+  "version": "1.22.19",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,9 @@
     "analyze": "BUNDLE_ANALYZE=both next build",
     "lint": "next lint",
     "prettier-fix": "prettier --write .",
-    "find:unused": "npx next-unused"
+    "find:unused": "npx next-unused",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "sideEffects": false,
   "dependencies": {
@@ -22,10 +24,10 @@
     "@vercel/commerce-local": "workspace:*",
     "@vercel/commerce-ordercloud": "workspace:*",
     "@vercel/commerce-saleor": "workspace:*",
+    "@vercel/commerce-sfcc": "workspace:*",
     "@vercel/commerce-shopify": "workspace:*",
     "@vercel/commerce-spree": "workspace:*",
     "@vercel/commerce-swell": "workspace:*",
-    "@vercel/commerce-sfcc": "workspace:*",
     "@vercel/commerce-vendure": "workspace:*",
     "autoprefixer": "^10.4.2",
     "body-scroll-lock": "^4.0.0-beta.0",
@@ -56,6 +58,7 @@
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
+    "cypress": "^10.8.0",
     "eslint": "^8.6.0",
     "eslint-config-next": "^12.0.8",
     "eslint-config-prettier": "^8.3.0",

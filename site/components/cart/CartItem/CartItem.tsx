@@ -95,6 +95,7 @@ const CartItem = ({
                 src={item.variant.image?.url || placeholderImg}
                 alt={item.variant.image?.altText || "Product Image"}
                 unoptimized
+                data-test="product-image"
               />
             </a>
           </Link>
