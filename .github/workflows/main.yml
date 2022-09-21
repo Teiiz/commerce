@@ -14,8 +14,8 @@ jobs:
         with:
           project: ./site
           browser: chrome
-          build: yarn build
-          start: yarn start
+          build: turbo run build --filter=next-commerce...
+          start: turbo run start
           wait-on: "http://localhost:3000"
         env:
           COMMERCE_PROVIDER: ${{ secrets.COMMERCE_PROVIDER }}
