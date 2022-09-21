@@ -49,6 +49,7 @@ const I18nWidget: FC = () => {
         <div
           className="flex items-center relative"
           onClick={() => setDisplay(!display)}
+          data-test="lang-btn"
         >
           <button className={s.button} aria-label="Language selector">
             <Image
@@ -85,6 +86,7 @@ const I18nWidget: FC = () => {
                       <a
                         className={cn(s.item)}
                         onClick={() => setDisplay(false)}
+                        data-test="lang"
                       >
                         {LOCALES_MAP[locale].name}
                       </a>

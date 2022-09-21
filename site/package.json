@@ -9,7 +9,9 @@
     "analyze": "BUNDLE_ANALYZE=both next build",
     "lint": "next lint",
     "prettier-fix": "prettier --write .",
-    "find:unused": "npx next-unused"
+    "find:unused": "npx next-unused",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "sideEffects": false,
   "dependencies": {
@@ -56,6 +58,7 @@
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
+    "cypress": "^10.8.0",
     "eslint": "^8.6.0",
     "eslint-config-next": "^12.0.8",
     "eslint-config-prettier": "^8.3.0",
