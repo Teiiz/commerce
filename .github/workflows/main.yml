@@ -22,7 +22,7 @@ jobs:
         with:
           project: ./site
           browser: chrome
-          build: pnpm turbo run build
+          build: pnpm install cypress --save-dev
           start: pnpm turbo run start
           wait-on: "http://localhost:3000"
         env:
