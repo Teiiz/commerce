@@ -39,7 +39,7 @@
 declare global {
   namespace Cypress {
     interface Chainable {
-      getBySel(selector: string): Chainable<Element>
+      getBySel(selector: string): Chainable<any>
     }
   }
 }
