@@ -36,21 +36,19 @@
 //   }
 // }
 
-Cypress.Commands.add("getBySel", (selector) => {
-    return cy.get(`[data-test=${selector}]`)
-  })
-
 declare global {
   namespace Cypress {
     interface Chainable {
-      /**
-       * Custom command to select DOM element by data-cy attribute.
-       * @example cy.dataCy('greeting')
-       */
       getBySel(selector: string): Chainable<Element>
     }
   }
 }
+
+Cypress.Commands.add("getBySel", (selector) => {
+    return cy.get(`[data-test=${selector}]`)
+  })
+
+
 
 export {}
   
